@@ -61,3 +61,69 @@ const userProfile = {
 
 console.log("E6: ", userProfile);
 
+// E7:
+// Created ImportingFile.js and exportingFile.js 
+
+// E8:
+// Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
+// The function should log a sentence 'The cat is white.' by default. The function should substitute the appropriate parameters when supplied arguments.
+
+const words = (noun="cat", adjective="white") => {
+    return(`This ${noun} is ${adjective}`)
+}
+
+console.log("E8: ",  words("dog", "red"))
+// E9:
+// Convert the following `if...else` statement in to a ternary:
+
+let pizza = 'tasty';
+
+// if (pizza === 'tasty') {
+//   console.log('yum');
+// } else {
+//   console.log('yuck');
+// }
+
+let isTasty = pizza == "tasty" ? 'Yummy!' : 'Yuck!!!!'
+
+console.log("E9: ", isTasty)
+
+// E10:
+// 1. SET LANGUAGE
+
+// Construct a single line of code that assigns a default value using the logical OR operator. This line should match the logic of the following statement: 
+
+// "LANG is equal to localLangConfig or the default value of English."
+
+const localLangConfig = null;  // Change to 'es', 'fr', etc., or keep it null
+
+// a. Create a variable called LANG
+// b. Assign LANG the value of localLangConfig or 'en' as a default
+
+const LANG = localLangConfig || 'EN'
+
+console.log('E10: Language setting:', LANG);
+
+// 2. SET WEBSITE THEME
+
+const userSavedTheme = null; // Change to 'dark', 'contrast', etc., or keep it null
+
+// a. Create a variable called USER_THEME
+// b. Assign USER_THEME the value of userSavedTheme or 'light' as a default
+
+const USER_THEME = userSavedTheme || 'light'
+
+console.log('E10a: User theme setting:', USER_THEME);
+
+
+// E11:
+// Now check for `cat.age` on `adventurer`. See how it errors out? Use optional chaining in a console.log that it returns undefined instead.
+
+const adventurer = {
+    name: 'Alice',
+};
+  
+let cat; 
+const catAge = cat?.age
+
+console.log("E11: ", cat )
